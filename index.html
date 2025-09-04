@@ -395,7 +395,7 @@
                 		</form>
 
 					<!-- Sucess Popup -->
-					<div id="popup-message" style="display:none; margin-top:15px; padding:10px; background:#28a745; color:#fff; border-radius:5px;"> </div>
+					<p id="form-status" style="display:none; margin-top:10px; font-weight:bold;"></p>
 						
                     </div>
                 </div>
@@ -405,7 +405,7 @@
 
 			<script>
   				const form = document.getElementById("contact-form");
-  				const popup = document.getElementById("popup-message");
+  				const popup = document.getElementById("form-status");
 
   				form.addEventListener("submit", async function(event) {
     				event.preventDefault();
