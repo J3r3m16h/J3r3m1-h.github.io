@@ -420,16 +420,21 @@
       					});
 
       					if (response.ok) {
-        					popup.style.display = "block";    // show popup
+        					status.style.display = "block";
+							status.style.color = "green"; // show popup
+							status.textContent = "Email sent successfully";
         					form.reset();                     // clear form
-        					setTimeout(() => popup.style.display = "none", 4000); // hide popup after 4s
-      						} else {
-        						alert("Oops! Something went wrong. Please try again.");
-      						}
-    					} catch (error) {
-      						alert("Error sending message.");
-    					}
-  					});
+						} else {
+							status.style.display = "block";
+							status.style.color = "red";
+							status.textContent = "Something went Wrong. Please try Again";
+						}
+					} catch (error) {
+						status.style.display = "block";
+						status.style.color = "red";
+						status.textContext = "Error sending message.";
+					}
+				});
 			</script>
 			
 			<!--  Start of Email Script  --->
